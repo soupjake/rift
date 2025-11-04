@@ -1,0 +1,60 @@
+[gd_scene load_steps=5 format=3 uid="uid://ipec64a7ppbk"]
+
+[ext_resource type="PackedScene" uid="uid://dv6cra1od52yx" path="res://players/player.tscn" id="1_46lwt"]
+[ext_resource type="Texture2D" uid="uid://bnjcsmqpiymbm" path="res://assets/backgrounds/back.png" id="1_w7r7j"]
+[ext_resource type="Texture2D" uid="uid://bqboqftr24jus" path="res://assets/backgrounds/middle.png" id="2_o6mel"]
+[ext_resource type="PackedScene" uid="uid://b8c4vek6d7gkv" path="res://levels/platform.tscn" id="2_x25rp"]
+
+[node name="TestLevel" type="Node2D"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 480.0
+offset_bottom = 270.0
+color = Color(0.35161653, 0.7641311, 0.9967236, 1)
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_top = 1.0
+offset_right = 480.0
+offset_bottom = 270.0
+texture = ExtResource("1_w7r7j")
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+offset_top = 59.0
+offset_right = 176.0
+offset_bottom = 427.0
+texture = ExtResource("2_o6mel")
+
+[node name="TextureRect3" type="TextureRect" parent="."]
+offset_left = 148.0
+offset_top = 73.0
+offset_right = 324.0
+offset_bottom = 441.0
+texture = ExtResource("2_o6mel")
+
+[node name="TextureRect4" type="TextureRect" parent="."]
+offset_left = 305.0
+offset_top = 59.0
+offset_right = 481.0
+offset_bottom = 427.0
+texture = ExtResource("2_o6mel")
+
+[node name="Platform" parent="." instance=ExtResource("2_x25rp")]
+position = Vector2(93, 104)
+scale = Vector2(5, 1)
+
+[node name="Platform2" parent="." instance=ExtResource("2_x25rp")]
+position = Vector2(199, 69)
+scale = Vector2(5, 1)
+
+[node name="Platform3" parent="." instance=ExtResource("2_x25rp")]
+position = Vector2(302, 107)
+
+[node name="Platform4" parent="." instance=ExtResource("2_x25rp")]
+position = Vector2(359, 144)
+
+[node name="Platform5" parent="." instance=ExtResource("2_x25rp")]
+position = Vector2(268, 214)
+scale = Vector2(25, 6)
+
+[node name="Player" parent="." instance=ExtResource("1_46lwt")]
+position = Vector2(232, 144)
